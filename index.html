@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Instagram Feed</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assests/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="assests/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <script src="assests/instagram-feed.js"></script>
+	
+	<script>
+		var page = 1;
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+      console.log(++page);
+      $("body").append('<div class="big-box"><h1>Page ' + page + '</h1></div>');
+      
+    }
+});
+
+	</script>
+</head>
+
+<body>
+<div class="jumbotron text-center">
+	<h1>My Instagram Feed</h1>
+	<p>Check out my Instagram page</p>
+</div>
+
+<div class="container">
+	<div class="row">
+	<div class="big-box">
+			<div class="col-sm">
+			<ul id="my_instafeed" id="posts"></ul>
+		</div>
+	</div>
+
+	</div>
+</body>
+</div>
+</html>
